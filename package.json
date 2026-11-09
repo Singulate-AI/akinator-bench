@@ -1,0 +1,10 @@
+{
+  "name": "akinator-bench",
+  "private": true,
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node server.mjs",
+    "bench": "node bench.mjs",
+    "test": "node --test"
+  }
+}

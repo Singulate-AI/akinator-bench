@@ -1,0 +1,349 @@
+:root {
+  --night: #2c1244;
+  --velvet: #3f1c5e;
+  --velvet-lit: #55297a;
+  --line: #7a55a0;
+  --mist: #d6c6e6;
+  --cream: #fbf1dc;
+  --saffron: #f5bb3f;
+  --saffron-lit: #ffd678;
+  --jade: #4fd8bf;
+  --cerise: #c2336f;
+  --parchment: #f6e7c6;
+  --parchment-line: #cfb483;
+  --ink: #2c1244;
+  --ink-soft: #5d4670;
+  --poster: Copperplate, "Copperplate Gothic Bold", "Perpetua Titling MT", "Palatino Linotype", serif;
+  --reading: "Iowan Old Style", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(70rem 42rem at 72% -8rem, var(--velvet-lit), transparent 70%), var(--night);
+  background-repeat: no-repeat;
+  background-color: var(--night);
+  color: var(--cream);
+  font: 18px/1.5 var(--reading);
+}
+
+button, select { font: inherit; }
+button { cursor: pointer; }
+button:disabled { opacity: .55; cursor: wait; }
+:focus-visible { outline: 3px solid var(--saffron); outline-offset: 3px; }
+h1:focus, h2:focus { outline: none; }
+
+.shell {
+  width: min(1136px, 100% - clamp(32px, 9vw, 120px));
+  margin-inline: auto;
+}
+
+/* Tent fringe: two offset rows of scallops hang from the masthead. */
+.masthead {
+  position: relative;
+  background: var(--velvet);
+}
+
+.masthead::after {
+  content: "";
+  position: absolute;
+  inset: 100% 0 auto;
+  height: 20px;
+  background:
+    radial-gradient(circle at 20px 0, var(--saffron) 19.500px, transparent 20px) 0 0 / 80px 20px repeat-x,
+    radial-gradient(circle at 20px 0, var(--cerise) 19.500px, transparent 20px) 40px 0 / 80px 20px repeat-x;
+  pointer-events: none;
+}
+
+.masthead-inner, .results-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.masthead-inner { min-height: 72px; }
+.brand { display: flex; align-items: center; gap: 12px; font: 700 1.3rem var(--poster); letter-spacing: .03em; }
+.brand-mark { flex-shrink: 0; color: var(--saffron); }
+nav { display: flex; gap: 4px; }
+
+nav button {
+  min-height: 40px;
+  padding: 6px 18px;
+  border: 0;
+  border-radius: 50px;
+  background: transparent;
+  color: var(--mist);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+nav button:hover { color: var(--cream); }
+nav button[aria-pressed="true"] { background: var(--saffron); color: var(--ink); }
+
+.play-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+  align-items: center;
+  gap: clamp(36px, 7vw, 94px);
+  padding-block: 84px 72px;
+}
+
+h1, h2 { font-weight: 400; }
+
+h1 {
+  margin: 0;
+  color: var(--saffron);
+  font-family: var(--poster);
+  font-weight: 700;
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  line-height: 1;
+  letter-spacing: .01em;
+}
+
+.lede {
+  max-width: 32rem;
+  margin: 24px 0 0;
+  color: var(--mist);
+  font-size: 1.2rem;
+}
+
+.steps { list-style: none; margin: 36px 0 0; padding: 0; }
+.steps li { display: flex; align-items: baseline; gap: 14px; padding-block: 6px; }
+.steps span { width: 1em; color: var(--jade); font: 700 1.3rem var(--poster); }
+
+/* The booth: an arched window, ruled twice like a theatre poster. */
+.console {
+  min-width: 0;
+  padding: clamp(36px, 5vw, 60px) clamp(20px, 3.4vw, 44px) clamp(24px, 3.4vw, 40px);
+  border: 2px solid var(--saffron);
+  border-radius: 320px 320px 20px 20px;
+  background: var(--velvet);
+  box-shadow: 0 0 0 7px var(--night), 0 0 0 9px var(--saffron);
+  text-align: center;
+}
+
+.seer { display: block; width: min(250px, 72%); height: auto; margin: 0 auto 10px; overflow: visible; }
+.seer-rays { fill: none; stroke: var(--saffron); stroke-width: 4; stroke-linecap: round; opacity: .55; transform-origin: 130px 92px; }
+.seer-white { fill: var(--parchment); }
+.seer-iris { fill: var(--jade); transition: fill .3s; }
+.seer-ring { fill: none; stroke: var(--night); stroke-opacity: .4; stroke-width: 3; stroke-dasharray: 2 6; }
+.seer-pupil { fill: var(--night); transform-box: fill-box; transform-origin: center; transition: transform .3s; }
+.seer-glint { fill: var(--cream); }
+.seer-lid { fill: var(--velvet-lit); transition: transform .3s; }
+.seer-outline { fill: none; stroke: var(--saffron); stroke-width: 4; }
+
+.console[data-mood="asking"] .seer-lid { animation: seer-blink .36s ease-in-out; }
+.console[data-mood="thinking"] .seer-gaze { animation: seer-search 1.5s ease-in-out infinite alternate; }
+.console[data-mood="thinking"] .seer-pupil { transform: scale(.75); }
+.console[data-mood="reveal"] .seer-rays,
+.console[data-mood="right"] .seer-rays { opacity: 1; animation: seer-flare .6s ease-out; }
+.console[data-mood="reveal"] .seer-pupil { transform: scale(1.45); }
+.console[data-mood="right"] .seer-iris { fill: var(--saffron); }
+.console[data-mood="wrong"] .seer-lid { transform: translateY(36px); }
+.console[data-mood="wrong"] .seer-iris { fill: var(--mist); }
+.console[data-mood="wrong"] .seer-rays { opacity: .2; }
+
+@keyframes seer-blink { 50% { transform: translateY(88px); } }
+@keyframes seer-search { from { transform: translateX(-30px); } to { transform: translateX(30px); } }
+@keyframes seer-flare { from { transform: scale(.82); opacity: .2; } }
+
+.console-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  min-height: 30px;
+  color: var(--mist);
+  font-size: .95rem;
+}
+
+.console-label, .counter { margin: 0; }
+.console-label { color: var(--saffron); font-weight: 700; }
+
+.console h2 {
+  margin: 12px 0 0;
+  font-size: clamp(1.6rem, 2.7vw, 2.15rem);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+#setup-form { display: grid; gap: 10px; max-width: 26rem; margin: 26px auto 0; text-align: left; }
+#setup-form label { color: var(--mist); font-size: 1rem; }
+
+#setup-form select {
+  min-width: 0;
+  width: 100%;
+  min-height: 46px;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--night);
+  color: var(--cream);
+  color-scheme: dark;
+}
+
+.primary, .secondary, .actions button {
+  min-height: 48px;
+  padding: 9px 18px;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  font-weight: 700;
+}
+
+.primary { background: var(--saffron); color: var(--ink); }
+.primary:hover:enabled { background: var(--saffron-lit); }
+.secondary { flex-shrink: 0; border-color: var(--saffron); background: transparent; color: var(--saffron); }
+.secondary:hover:enabled { background: var(--saffron); color: var(--ink); }
+
+.text-button {
+  padding: 4px 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-size: .95rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+#round { padding-top: 14px; }
+.round-kicker { margin: 0; color: var(--jade); font-style: italic; font-size: 1.1rem; }
+#round-title { min-height: 1.2em; }
+
+/* A named guess is the climax of the game, so it gets the poster lettering. */
+.console[data-mood="reveal"] #round-title,
+.console[data-mood="right"] #round-title,
+.console[data-mood="wrong"] #round-title {
+  color: var(--saffron);
+  font-family: var(--poster);
+  font-weight: 700;
+  font-size: clamp(2.1rem, 3.8vw, 3rem);
+  line-height: 1.08;
+}
+
+.actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 26px; }
+.actions button { border-color: var(--line); background: var(--night); color: var(--cream); }
+.actions button:hover:enabled { border-color: var(--saffron); background: var(--saffron); color: var(--ink); }
+.actions button[data-answer="dont_know"] { grid-column: 1 / -1; }
+.verdict { margin: 12px 0 0; color: var(--jade); font-weight: 700; }
+
+#history {
+  margin-top: 24px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--mist);
+  font-size: 1rem;
+  text-align: left;
+}
+
+#history summary { width: fit-content; cursor: pointer; }
+#history ol { margin: 10px 0 0; padding-left: 24px; }
+#history li + li { margin-top: 6px; }
+#history strong { color: var(--saffron); }
+.live-status { margin: 14px 0 0; color: var(--saffron); font-style: italic; }
+.live-status:empty, .results-status:empty { display: none; }
+
+.error {
+  margin-top: 14px;
+  padding: 10px 14px;
+  border: 1px solid #e27a93;
+  border-radius: 10px;
+  background: #5a1f45;
+  color: #ffe3ea;
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+
+.error p { margin: 0; }
+
+#results { padding-block: 72px 80px; }
+.results-heading { align-items: flex-end; }
+.results-heading .lede { margin-top: 14px; }
+.results-status { color: var(--mist); margin-bottom: 0; }
+
+/* The leaderboard is a playbill: paper, ink and a double rule. */
+.scoreboard {
+  --rank: 2.8rem;
+  --cell: 14px;
+  margin-top: 36px;
+  padding: clamp(14px, 3vw, 34px);
+  border: 4px double var(--ink);
+  outline: 8px solid var(--parchment);
+  background: var(--parchment);
+  color: var(--ink);
+}
+
+.scoreboard :focus-visible { outline-color: var(--ink); }
+.scoreboard table { min-width: 0; font-size: 1.15rem; border-collapse: separate; border-spacing: 0; }
+.scoreboard caption { padding: 0 0 12px; border: 0; color: var(--ink); font: 700 1.5rem var(--poster); }
+.scoreboard thead { background: none; }
+.scoreboard thead th { padding-block: 6px; border-bottom: 2px solid var(--ink); color: var(--ink-soft); font-size: 1rem; font-weight: 400; }
+.scoreboard thead th:first-child { padding-left: calc(var(--cell) + var(--rank)); }
+.scoreboard th:last-child, .scoreboard td { text-align: right; }
+.scoreboard td { font-weight: 700; font-variant-numeric: lining-nums tabular-nums; white-space: nowrap; }
+.scoreboard tbody th, .scoreboard td { padding-block: 9px; border-color: var(--parchment-line); vertical-align: baseline; }
+.scoreboard tbody th { font-weight: 400; }
+
+#model-scores { counter-reset: rank; }
+#model-scores tr { counter-increment: rank; }
+#model-scores th { padding-left: calc(var(--cell) + var(--rank)); text-indent: calc(var(--rank) * -1); }
+#model-scores th::before {
+  content: counter(rank);
+  display: inline-block;
+  width: calc(var(--rank) - .5rem);
+  margin-right: .5rem;
+  color: var(--cerise);
+  font: 700 1.2rem var(--poster);
+  text-align: right;
+}
+
+#model-scores tr:first-child th, #model-scores tr:first-child td { font-size: 1.55rem; font-weight: 700; }
+
+/* The official game's row separates models that beat it from those that did not. */
+#model-scores .baseline { background: var(--ink); }
+#model-scores .baseline th, #model-scores .baseline td { color: var(--parchment); border-color: var(--ink); }
+#model-scores .baseline th::before { color: var(--saffron); }
+.baseline-tag { margin-left: .7rem; color: var(--saffron); text-indent: 0; font-style: italic; font-size: 1rem; }
+
+.character-results { margin-top: 40px; }
+.character-results summary { width: fit-content; margin-bottom: 12px; color: var(--saffron); cursor: pointer; font-weight: 700; }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--velvet); }
+table { width: 100%; min-width: 1500px; border-collapse: collapse; text-align: left; font-size: .95rem; }
+caption { padding: 14px; border-bottom: 1px solid var(--line); text-align: left; font-weight: 700; }
+th, td { padding: 11px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+thead { background: var(--night); }
+tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
+.table-wrap tbody th { white-space: nowrap; font-weight: 700; }
+
+.badge { display: inline-block; padding: 1px 9px; border-radius: 20px; background: var(--velvet-lit); color: var(--cream); font-size: .9rem; white-space: nowrap; }
+.badge[data-status="correct"] { background: var(--jade); color: var(--ink); }
+.badge[data-status="incorrect"] { background: #f2a3b5; color: var(--ink); }
+.cell-detail { margin: 5px 0 0; color: var(--mist); }
+
+@media (max-width: 800px) {
+  .play-layout { grid-template-columns: 1fr; padding-block: 60px 48px; }
+  .console { border-radius: 180px 180px 20px 20px; margin-inline: 9px; }
+  .results-heading { align-items: flex-start; flex-direction: column; }
+  .scoreboard { margin-inline: 8px; }
+}
+
+@media (max-width: 480px) {
+  .brand { font-size: 1.05rem; gap: 8px; }
+  .brand-mark { width: 26px; height: 16px; }
+  nav button { padding-inline: 12px; }
+  .scoreboard { --rank: 2rem; --cell: 6px; }
+  .scoreboard table { font-size: 1.02rem; }
+  .scoreboard th, .scoreboard td { padding-right: var(--cell); }
+  #model-scores tr:first-child th, #model-scores tr:first-child td { font-size: 1.25rem; }
+  .baseline-tag { display: block; margin-left: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .seer * { animation: none !important; transition: none !important; }
+}

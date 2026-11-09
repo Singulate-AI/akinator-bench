@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Mind Reader Bench</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="shell masthead-inner">
+      <div class="brand">
+        <svg class="brand-mark" aria-hidden="true" width="34" height="20" viewBox="0 0 34 20">
+          <path d="M1.5 10C7 2.5 27 2.5 32.5 10 27 17.500 7 17.500 1.500 10Z" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="17" cy="10" r="4.500" fill="currentColor"/>
+        </svg>
+        Mind Reader Bench
+      </div>
+      <nav aria-label="Bench views">
+        <button id="play-view" type="button" aria-pressed="true" aria-controls="play">Play</button>
+        <button id="results-view" type="button" aria-pressed="false" aria-controls="results">Results</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section id="play" aria-labelledby="play-title">
+      <div class="play-layout">
+        <div class="introduction">
+          <h1 id="play-title">Think of<br> a character</h1>
+          <p class="lede">Real or fictional. Keep the name to yourself and see if an AI model can figure it out by asking questions.</p>
+          <ol class="steps" aria-label="How to play">
+            <li><span aria-hidden="true">1</span> Pick a character and a model.</li>
+            <li><span aria-hidden="true">2</span> Answer each question as best you can.</li>
+            <li><span aria-hidden="true">3</span> Score the model's first guess.</li>
+          </ol>
+        </div>
+
+        <div id="stage" class="console" data-mood="idle">
+          <svg class="seer" viewBox="-8 10 276 132" aria-hidden="true">
+            <defs>
+              <clipPath id="seer-eye"><path d="M22 92C62 34 198 34 238 92 198 150 62 150 22 92Z"/></clipPath>
+            </defs>
+            <path class="seer-rays" d="M24.400 78L-3.300 74.300M39.900 65.600L24.600 61.100M58.500 55.500L33.600 42.700M79.800 47.400L67.900 36.800M103.800 41.700L90.800 16.900M130 39.500L130 23.500M156.200 41.700L169.200 16.900M180.200 47.400L192.100 36.800M201.500 55.500L226.400 42.700M220.100 65.600L235.400 61.100M235.600 78L263.300 74.300"/>
+            <g clip-path="url(#seer-eye)">
+              <rect class="seer-white" x="0" y="20" width="260" height="130"/>
+              <g class="seer-gaze">
+                <circle class="seer-iris" cx="130" cy="92" r="37"/>
+                <circle class="seer-ring" cx="130" cy="92" r="28"/>
+                <circle class="seer-pupil" cx="130" cy="92" r="15"/>
+                <circle class="seer-glint" cx="143" cy="79" r="5"/>
+              </g>
+              <path class="seer-lid" d="M0-100H260V4H238C198 62 62 62 22 4H0Z"/>
+            </g>
+            <path class="seer-outline" d="M22 92C62 34 198 34 238 92 198 150 62 150 22 92Z"/>
+          </svg>
+
+          <div class="console-header">
+            <p id="console-label" class="console-label">Live game</p>
+            <p id="question-count" class="counter" hidden></p>
+            <button id="reset-game" class="text-button" type="button" hidden>New game</button>
+          </div>
+
+          <div id="setup">
+            <h2>Who can read your mind?</h2>
+            <form id="setup-form">
+              <label for="model">Choose a model</label>
+              <select id="model" name="model" required disabled>
+                <option value="">Loading models...</option>
+              </select>
+              <button id="start-game" class="primary" type="submit" disabled>Start game</button>
+            </form>
+          </div>
+
+          <div id="round" hidden>
+            <p id="round-kicker" class="round-kicker"></p>
+            <h2 id="round-title" tabindex="-1"></h2>
+            <p id="verdict" class="verdict" role="status" hidden></p>
+            <div id="answer-controls" class="actions" role="group" aria-label="Your answer">
+              <button type="button" data-answer="yes">Yes</button>
+              <button type="button" data-answer="no">No</button>
+              <button type="button" data-answer="probably">Probably</button>
+              <button type="button" data-answer="probably_not">Probably not</button>
+              <button type="button" data-answer="dont_know">Don't know</button>
+            </div>
+            <div id="guess-controls" class="actions" role="group" aria-label="Score the model's guess" hidden>
+              <button type="button" data-verdict="Correct">That's right</button>
+              <button type="button" data-verdict="Incorrect">That's wrong</button>
+            </div>
+            <details id="history" hidden>
+              <summary>Previous answers</summary>
+              <ol id="turns"></ol>
+            </details>
+          </div>
+
+          <p id="game-status" class="live-status" role="status"></p>
+          <div id="game-error" class="error" hidden>
+            <p id="game-error-text" role="alert"></p>
+            <button id="retry-game" type="button" class="text-button">Try again</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" aria-labelledby="results-title" hidden>
+      <div class="results-heading">
+        <div>
+          <h1 id="results-title" tabindex="-1">Scoreboard</h1>
+          <p class="lede">Correct guesses count the questions asked. Each miss counts as 50. Fewest questions wins.</p>
+        </div>
+        <button id="refresh-results" type="button" class="secondary">Refresh results</button>
+      </div>
+      <p id="results-status" class="results-status" role="status"></p>
+      <p id="results-error" class="error results-error" role="alert" hidden></p>
+      <div id="results-content" hidden>
+        <div class="scoreboard">
+          <table>
+            <caption>Ranked by total questions</caption>
+            <thead>
+              <tr><th scope="col">Model</th><th scope="col">Total questions</th></tr>
+            </thead>
+            <tbody id="model-scores"></tbody>
+          </table>
+        </div>
+        <details class="character-results">
+          <summary>First guesses by character</summary>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Character results">
+            <table>
+              <caption>First guess by character</caption>
+              <thead id="score-head"></thead>
+              <tbody id="score-body"></tbody>
+            </table>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

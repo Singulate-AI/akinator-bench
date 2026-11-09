@@ -1,0 +1,1012 @@
+{
+  "tom_cruise": {
+    "status": "correct",
+    "questions": 18,
+    "guess": "Tom Cruise",
+    "observed_on": "2026-11-07",
+    "transcript": [
+      {
+        "topic": "Female",
+        "answer": "no"
+      },
+      {
+        "topic": "Real person",
+        "answer": "yes"
+      },
+      {
+        "topic": "Older than 35",
+        "answer": "yes"
+      },
+      {
+        "topic": "Deceased",
+        "answer": "no"
+      },
+      {
+        "topic": "Lives in America",
+        "answer": "yes"
+      },
+      {
+        "topic": "Actor",
+        "answer": "yes"
+      },
+      {
+        "topic": "Associated with a superhero",
+        "answer": "no"
+      },
+      {
+        "topic": "Dark hair",
+        "answer": "yes"
+      },
+      {
+        "topic": "White",
+        "answer": "yes"
+      },
+      {
+        "topic": "Currently older than 50",
+        "answer": "yes"
+      },
+      {
+        "topic": "Appeared in Pirates of the Caribbean",
+        "answer": "no"
+      },
+      {
+        "topic": "Likes using guns",
+        "answer": "dont_know"
+      },
+      {
+        "topic": "Originated in a TV series",
+        "answer": "no"
+      },
+      {
+        "topic": "Older than 70",
+        "answer": "no"
+      },
+      {
+        "topic": "Often appears in action films",
+        "answer": "yes"
+      },
+      {
+        "topic": "Appears in Mission: Impossible film series",
+        "answer": "yes"
+      },
+      {
+        "topic": "Appears in Mission: Impossible",
+        "answer": "yes"
+      },
+      {
+        "topic": "Has a pilot's license",
+        "answer": "yes"
+      }
+    ]
+  },
+  "arnold_schwarzenegger": {
+    "status": "correct",
+    "questions": 17,
+    "guess": "Arnold Schwarzenegger",
+    "observed_on": "2026-11-07",
+    "transcript": [
+      {
+        "topic": "Female",
+        "answer": "no"
+      },
+      {
+        "topic": "Real person",
+        "answer": "yes"
+      },
+      {
+        "topic": "Lives in America",
+        "answer": "yes"
+      },
+      {
+        "topic": "YouTube creator",
+        "answer": "no"
+      },
+      {
+        "topic": "Music performer or worker",
+        "answer": "no"
+      },
+      {
+        "topic": "Actor",
+        "answer": "yes"
+      },
+      {
+        "topic": "Associated with a superhero",
+        "answer": "yes"
+      },
+      {
+        "topic": "Associated with spiders",
+        "answer": "no"
+      },
+      {
+        "topic": "Avengers member",
+        "answer": "no"
+      },
+      {
+        "topic": "Wears a mask",
+        "answer": "no"
+      },
+      {
+        "topic": "Lives on a farm",
+        "answer": "probably_not"
+      },
+      {
+        "topic": "Can fly",
+        "answer": "no"
+      },
+      {
+        "topic": "Bodybuilder",
+        "answer": "yes"
+      },
+      {
+        "topic": "Has hair",
+        "answer": "yes"
+      },
+      {
+        "topic": "Appears in the Terminator series",
+        "answer": "yes"
+      },
+      {
+        "topic": "Acts in Terminator films",
+        "answer": "yes"
+      },
+      {
+        "topic": "Has a Minecraft Survival series",
+        "answer": "no"
+      }
+    ]
+  },
+  "donald_trump": {
+    "status": "correct",
+    "questions": 11,
+    "guess": "Donald Trump",
+    "observed_on": "2026-11-07",
+    "transcript": [
+      {
+        "topic": "Female",
+        "answer": "no"
+      },
+      {
+        "topic": "Real person",
+        "answer": "yes"
+      },
+      {
+        "topic": "Older than 35",
+        "answer": "yes"
+      },
+      {
+        "topic": "Deceased",
+        "answer": "no"
+      },
+      {
+        "topic": "Lives in America",
+        "answer": "yes"
+      },
+      {
+        "topic": "Actor",
+        "answer": "probably_not"
+      },
+      {
+        "topic": "Music connection",
+        "answer": "no"
+      },
+      {
+        "topic": "Trump supporter",
+        "answer": "probably"
+      },
+      {
+        "topic": "Current or former president",
+        "answer": "yes"
+      },
+      {
+        "topic": "Plans to build a wall",
+        "answer": "probably"
+      },
+      {
+        "topic": "Dark-skinned",
+        "answer": "no"
+      }
+    ]
+  },
+  "oolong": {
+    "status": "correct",
+    "questions": 20,
+    "guess": "Oolong",
+    "observed_on": "2026-11-07",
+    "transcript": [
+      {
+        "topic": "Female",
+        "answer": "no"
+      },
+      {
+        "topic": "Older than 35",
+        "answer": "no"
+      },
+      {
+        "topic": "Real person",
+        "answer": "no"
+      },
+      {
+        "topic": "From anime",
+        "answer": "yes"
+      },
+      {
+        "topic": "Black hair",
+        "answer": "no"
+      },
+      {
+        "topic": "Attends school",
+        "answer": "no"
+      },
+      {
+        "topic": "White hair",
+        "answer": "no"
+      },
+      {
+        "topic": "Blond hair",
+        "answer": "no"
+      },
+      {
+        "topic": "Has hair",
+        "answer": "no"
+      },
+      {
+        "topic": "Pokemon",
+        "answer": "no"
+      },
+      {
+        "topic": "Wears clothes",
+        "answer": "yes"
+      },
+      {
+        "topic": "Human",
+        "answer": "no"
+      },
+      {
+        "topic": "Animal",
+        "answer": "yes"
+      },
+      {
+        "topic": "Brown",
+        "answer": "no"
+      },
+      {
+        "topic": "Speaks Japanese",
+        "answer": "yes"
+      },
+      {
+        "topic": "From Dragon Ball",
+        "answer": "yes"
+      },
+      {
+        "topic": "Police role",
+        "answer": "no"
+      },
+      {
+        "topic": "Deity",
+        "answer": "no"
+      },
+      {
+        "topic": "Pig",
+        "answer": "yes"
+      },
+      {
+        "topic": "Friends with Goku",
+        "answer": "yes"
+      }
+    ]
+  },
+  "doctor_evil": {
+    "status": "correct",
+    "questions": 29,
+    "guess": "Dr. Evil",
+    "observed_on": "2026-11-07",
+    "transcript": [
+      {
+        "topic": "Female",
+        "answer": "no"
+      },
+      {
+        "topic": "Real person",
+        "answer": "no"
+      },
+      {
+        "topic": "Appears in anime",
+        "answer": "no"
+      },
+      {
+        "topic": "Wears shoes",
+        "answer": "yes"
+      },
+      {
+        "topic": "Originated in a game",
+        "answer": "no"
+      },
+      {
+        "topic": "Lives in America",
+        "answer": "no"
+      },
+      {
+        "topic": "Special powers",
+        "answer": "no"
+      },
+      {
+        "topic": "Has a phone",
+        "answer": "dont_know"
+      },
+      {
+        "topic": "Black hair",
+        "answer": "no"
+      },
+      {
+        "topic": "Originated in a cartoon",
+        "answer": "no"
+      },
+      {
+        "topic": "European",
+        "answer": "dont_know"
+      },
+      {
+        "topic": "Villain",
+        "answer": "yes"
+      },
+      {
+        "topic": "Human nose",
+        "answer": "yes"
+      },
+      {
+        "topic": "Light blond hair",
+        "answer": "no"
+      },
+      {
+        "topic": "Older than 34",
+        "answer": "yes"
+      },
+      {
+        "topic": "Disturbing",
+        "answer": "dont_know"
+      },
+      {
+        "topic": "Originated in a film",
+        "answer": "yes"
+      },
+      {
+        "topic": "White hair",
+        "answer": "no"
+      },
+      {
+        "topic": "Uses guns",
+        "answer": "probably_not"
+      },
+      {
+        "topic": "Has been to space",
+        "answer": "yes"
+      },
+      {
+        "topic": "Played for Arsenal",
+        "answer": "no"
+      },
+      {
+        "topic": "Appeared in Star Wars",
+        "answer": "no"
+      },
+      {
+        "topic": "Has hair",
+        "answer": "no"
+      },
+      {
+        "topic": "Solo singer",
+        "answer": "no"
+      },
+      {
+        "topic": "Blue",
+        "answer": "no"
+      },
+      {
+        "topic": "Has a son",
+        "answer": "yes"
+      },
+      {
+        "topic": "Speaks Norwegian",
+        "answer": "probably_not"
+      },
+      {
+        "topic": "Has a daughter",
+        "answer": "no"
+      },
+      {
+        "topic": "Originated in Marvel Comics",
+        "answer": "no"
+      }
+    ]
+  },
+  "wife": {
+    "status": "correct",
+    "questions": 17,
+    "guess": "Your wife",
+    "observed_on": "2026-11-07",
+    "transcript": [],
+    "detailsWithheld": true
+  },
+  "neighbour": {
+    "status": "incorrect",
+    "questions": 30,
+    "guess": "Benny the Bull",
+    "observed_on": "2026-11-07",
+    "transcript": [
+      {
+        "topic": "Female",
+        "answer": "no"
+      },
+      {
+        "topic": "Real person",
+        "answer": "yes"
+      },
+      {
+        "topic": "Older than 35",
+        "answer": "yes"
+      },
+      {
+        "topic": "Deceased",
+        "answer": "no"
+      },
+      {
+        "topic": "Lives in America",
+        "answer": "yes"
+      },
+      {
+        "topic": "Actor",
+        "answer": "no"
+      },
+      {
+        "topic": "Met Bill Clinton",
+        "answer": "dont_know"
+      },
+      {
+        "topic": "Music performer or worker",
+        "answer": "no"
+      },
+      {
+        "topic": "Sportsman",
+        "answer": "probably"
+      },
+      {
+        "topic": "Connected to a ball game",
+        "answer": "no"
+      },
+      {
+        "topic": "YouTube creator",
+        "answer": "no"
+      },
+      {
+        "topic": "Black",
+        "answer": "dont_know"
+      },
+      {
+        "topic": "Biggest success was in the 1980s",
+        "answer": "no"
+      },
+      {
+        "topic": "Life coach",
+        "answer": "no"
+      },
+      {
+        "topic": "Fights",
+        "answer": "no"
+      },
+      {
+        "topic": "Dark-skinned",
+        "answer": "dont_know"
+      },
+      {
+        "topic": "Black hair",
+        "answer": "no"
+      },
+      {
+        "topic": "Has hair",
+        "answer": "yes"
+      },
+      {
+        "topic": "Sports connection",
+        "answer": "yes"
+      },
+      {
+        "topic": "Plays a team sport",
+        "answer": "no"
+      },
+      {
+        "topic": "Bodybuilder",
+        "answer": "no"
+      },
+      {
+        "topic": "Currently older than 50",
+        "answer": "no"
+      },
+      {
+        "topic": "Wears a helmet",
+        "answer": "probably"
+      },
+      {
+        "topic": "In the player's family",
+        "answer": "no"
+      },
+      {
+        "topic": "Connected to cars",
+        "answer": "no"
+      },
+      {
+        "topic": "Skateboarder",
+        "answer": "no"
+      },
+      {
+        "topic": "American",
+        "answer": "yes"
+      },
+      {
+        "topic": "Connected to mountains",
+        "answer": "no"
+      },
+      {
+        "topic": "White",
+        "answer": "dont_know"
+      },
+      {
+        "topic": "Black hair",
+        "answer": "no"
+      }
+    ],
+    "notes": "First attempt stalled on answer 28. This row records the first guess from a fresh trial.",
+    "interrupted_attempt": {
+      "status": "unavailable",
+      "questions": null,
+      "guess": null,
+      "observed_on": "2026-11-07",
+      "reason": "The official game stalled after the answer to question 28.",
+      "transcript": [
+        {
+          "topic": "Female",
+          "answer": "no"
+        },
+        {
+          "topic": "Real person",
+          "answer": "yes"
+        },
+        {
+          "topic": "Currently older than 30",
+          "answer": "yes"
+        },
+        {
+          "topic": "Deceased",
+          "answer": "no"
+        },
+        {
+          "topic": "Lives in America",
+          "answer": "yes"
+        },
+        {
+          "topic": "Actor",
+          "answer": "no"
+        },
+        {
+          "topic": "Met Bill Clinton",
+          "answer": "dont_know"
+        },
+        {
+          "topic": "Music performer or worker",
+          "answer": "no"
+        },
+        {
+          "topic": "Trump supporter",
+          "answer": "dont_know"
+        },
+        {
+          "topic": "Sportsman",
+          "answer": "probably"
+        },
+        {
+          "topic": "Black",
+          "answer": "dont_know"
+        },
+        {
+          "topic": "Basketball player",
+          "answer": "no"
+        },
+        {
+          "topic": "In the military",
+          "answer": "no"
+        },
+        {
+          "topic": "Fights",
+          "answer": "no"
+        },
+        {
+          "topic": "YouTube creator",
+          "answer": "no"
+        },
+        {
+          "topic": "Connected to a ball game",
+          "answer": "no"
+        },
+        {
+          "topic": "Dark-skinned",
+          "answer": "dont_know"
+        },
+        {
+          "topic": "Bald",
+          "answer": "no"
+        },
+        {
+          "topic": "Sports connection",
+          "answer": "yes"
+        },
+        {
+          "topic": "Plays a string instrument",
+          "answer": "no"
+        },
+        {
+          "topic": "American",
+          "answer": "yes"
+        },
+        {
+          "topic": "Wears a blue outfit",
+          "answer": "probably_not"
+        },
+        {
+          "topic": "Streamer",
+          "answer": "no"
+        },
+        {
+          "topic": "Bodybuilder",
+          "answer": "no"
+        },
+        {
+          "topic": "White",
+          "answer": "dont_know"
+        },
+        {
+          "topic": "Long hair",
+          "answer": "no"
+        },
+        {
+          "topic": "Currently older than 50",
+          "answer": "no"
+        }
+      ],
+      "unconfirmed_answer": {
+        "topic": "Skateboarder",
+        "answer": "no"
+      }
+    }
+  },
+  "pickle_rick": {
+    "status": "correct",
+    "questions": 17,
+    "guess": "Pickle Rick",
+    "observed_on": "2026-11-07",
+    "transcript": [
+      {
+        "topic": "Female",
+        "answer": "no"
+      },
+      {
+        "topic": "Older than 35",
+        "answer": "yes"
+      },
+      {
+        "topic": "Still alive",
+        "answer": "yes"
+      },
+      {
+        "topic": "Lives in America",
+        "answer": "yes"
+      },
+      {
+        "topic": "Actor",
+        "answer": "no"
+      },
+      {
+        "topic": "Met Bill Clinton",
+        "answer": "dont_know"
+      },
+      {
+        "topic": "Needs bodyguards",
+        "answer": "no"
+      },
+      {
+        "topic": "Music connection",
+        "answer": "no"
+      },
+      {
+        "topic": "Sports connection",
+        "answer": "no"
+      },
+      {
+        "topic": "Real person",
+        "answer": "no"
+      },
+      {
+        "topic": "From a TV series",
+        "answer": "yes"
+      },
+      {
+        "topic": "Animated cartoon",
+        "answer": "yes"
+      },
+      {
+        "topic": "Has a daughter",
+        "answer": "yes"
+      },
+      {
+        "topic": "Scientist",
+        "answer": "yes"
+      },
+      {
+        "topic": "Turned himself into a pickle",
+        "answer": "yes"
+      },
+      {
+        "topic": "Wears clothes",
+        "answer": "probably_not"
+      },
+      {
+        "topic": "Small",
+        "answer": "yes"
+      }
+    ]
+  },
+  "mother": {
+    "status": "incorrect",
+    "questions": 30,
+    "guess": "Rahul Rais Future Bae",
+    "observed_on": "2026-11-08",
+    "transcript": [
+      {
+        "topic": "From anime",
+        "answer": "no"
+      },
+      {
+        "topic": "Has legs",
+        "answer": "yes"
+      },
+      {
+        "topic": "Personally knows the player",
+        "answer": "no"
+      },
+      {
+        "topic": "Female",
+        "answer": "yes"
+      },
+      {
+        "topic": "Singer",
+        "answer": "no"
+      },
+      {
+        "topic": "YouTube creator",
+        "answer": "no"
+      },
+      {
+        "topic": "Actor",
+        "answer": "no"
+      },
+      {
+        "topic": "Attends school",
+        "answer": "probably_not"
+      },
+      {
+        "topic": "From a horror game",
+        "answer": "no"
+      },
+      {
+        "topic": "Human nose",
+        "answer": "yes"
+      },
+      {
+        "topic": "Real person",
+        "answer": "no"
+      },
+      {
+        "topic": "Originated in a game",
+        "answer": "no"
+      },
+      {
+        "topic": "Special powers",
+        "answer": "no"
+      },
+      {
+        "topic": "Has siblings",
+        "answer": "dont_know"
+      },
+      {
+        "topic": "Dark hair",
+        "answer": "dont_know"
+      },
+      {
+        "topic": "Originated in a book",
+        "answer": "no"
+      },
+      {
+        "topic": "Brown hair",
+        "answer": "dont_know"
+      },
+      {
+        "topic": "Music connection",
+        "answer": "no"
+      },
+      {
+        "topic": "Portrayed as having children",
+        "answer": "yes"
+      },
+      {
+        "topic": "Originated in a TV series",
+        "answer": "no"
+      },
+      {
+        "topic": "Lives in America",
+        "answer": "dont_know"
+      },
+      {
+        "topic": "Music connection",
+        "answer": "no"
+      },
+      {
+        "topic": "Originated in a mobile game",
+        "answer": "no"
+      },
+      {
+        "topic": "Indian",
+        "answer": "dont_know"
+      },
+      {
+        "topic": "Famous on TikTok",
+        "answer": "probably_not"
+      },
+      {
+        "topic": "Polish",
+        "answer": "dont_know"
+      },
+      {
+        "topic": "Usually hides face",
+        "answer": "no"
+      },
+      {
+        "topic": "Meme",
+        "answer": "yes"
+      },
+      {
+        "topic": "On Spotify",
+        "answer": "no"
+      },
+      {
+        "topic": "Subject of internet memes",
+        "answer": "yes"
+      }
+    ]
+  },
+  "scarlett_johansson": {
+    "status": "incorrect",
+    "questions": 30,
+    "guess": "Gwyneth Paltrow",
+    "observed_on": "2026-11-08",
+    "transcript": [
+      {
+        "topic": "Female",
+        "answer": "yes"
+      },
+      {
+        "topic": "Real person",
+        "answer": "yes"
+      },
+      {
+        "topic": "Personally knows the player",
+        "answer": "no"
+      },
+      {
+        "topic": "Singer",
+        "answer": "yes"
+      },
+      {
+        "topic": "Member of an all-girls group",
+        "answer": "no"
+      },
+      {
+        "topic": "American",
+        "answer": "yes"
+      },
+      {
+        "topic": "Currently older than 30",
+        "answer": "yes"
+      },
+      {
+        "topic": "Has children",
+        "answer": "yes"
+      },
+      {
+        "topic": "Black",
+        "answer": "no"
+      },
+      {
+        "topic": "Associated with hunters",
+        "answer": "no"
+      },
+      {
+        "topic": "Currently older than 50",
+        "answer": "no"
+      },
+      {
+        "topic": "Pop star",
+        "answer": "no"
+      },
+      {
+        "topic": "YouTube creator",
+        "answer": "no"
+      },
+      {
+        "topic": "Plays in a rock band",
+        "answer": "no"
+      },
+      {
+        "topic": "Actor",
+        "answer": "yes"
+      },
+      {
+        "topic": "Blonde",
+        "answer": "probably"
+      },
+      {
+        "topic": "Associated with a superhero",
+        "answer": "yes"
+      },
+      {
+        "topic": "Wears a black uniform",
+        "answer": "no"
+      },
+      {
+        "topic": "Connected to someone from the Avengers",
+        "answer": "yes"
+      },
+      {
+        "topic": "Sorcerer or witch",
+        "answer": "no"
+      },
+      {
+        "topic": "Has a Minecraft Survival series",
+        "answer": "no"
+      },
+      {
+        "topic": "Wears makeup",
+        "answer": "yes"
+      },
+      {
+        "topic": "Spy",
+        "answer": "no"
+      },
+      {
+        "topic": "Played roles with supernatural powers",
+        "answer": "yes"
+      },
+      {
+        "topic": "Member of the Avengers",
+        "answer": "no"
+      },
+      {
+        "topic": "Wears a red cape",
+        "answer": "no"
+      },
+      {
+        "topic": "Worked in the 1990s",
+        "answer": "yes"
+      },
+      {
+        "topic": "Appears in the Iron Man series",
+        "answer": "yes"
+      },
+      {
+        "topic": "Has full lips",
+        "answer": "probably"
+      },
+      {
+        "topic": "Voiced by Scarlett Johansson",
+        "answer": "no"
+      }
+    ]
+  }
+}

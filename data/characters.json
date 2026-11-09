@@ -1,0 +1,168 @@
+[
+  {
+    "id": "wife",
+    "name": "My wife",
+    "aliases": [
+      "wife",
+      "your wife",
+      "the player's wife",
+      "spouse",
+      "my spouse",
+      "your spouse",
+      "the player's spouse"
+    ],
+    "profile": "Invented character for this benchmark. She is an adult Canadian woman who lives with the player in a small town in Nova Scotia. She works at a public library. She and the player are married and have one child. She wears glasses, enjoys birdwatching and baking bread, and has a pet cat. She speaks English and French. She personally knows the player and is in the player's family by marriage. Use these fictional facts when answering.",
+    "personalFacts": {
+      "relationship": "wife",
+      "hasChildren": true
+    }
+  },
+  {
+    "id": "neighbour",
+    "name": "My Neighbour",
+    "aliases": [
+      "Ben",
+      "Ben the neighbour",
+      "Ben the neighbor",
+      "my neighbour Ben",
+      "my neighbor Ben",
+      "your neighbour Ben",
+      "your neighbor Ben",
+      "my neighbor",
+      "your neighbour",
+      "your neighbor",
+      "the player's neighbour",
+      "the player's neighbor",
+      "neighbour",
+      "neighbor",
+      "next door neighbour",
+      "next door neighbor",
+      "your next door neighbour",
+      "your next door neighbor",
+      "your next door neighbour Ben",
+      "your next door neighbor Ben",
+      "Your neighbor Ben (Benjamin)"
+    ],
+    "profile": "Fixed fictional backstory for the benchmark. In the game Ben is a real 38-year-old American man who lives next door to the player in a residential neighborhood in Florida. He is married, has one school-age child, and lives with his wife and child. He knows the player as a neighbor. They are not friends. They chat and sometimes lend each other tools, but are neither relatives nor housemates. Ben is an electrician, enjoys cycling and gardening, and owns a dog and a hammer. He grew up in Florida, speaks English, has short dark brown hair and brown eyes, and normally wears neither glasses nor a beard. He is not famous or a content creator. His surname is unspecified. Answer personal questions using these in-game facts.",
+    "personalFacts": {
+      "relationship": "neighbor",
+      "hasChildren": true,
+      "isFriend": false
+    }
+  },
+  {
+    "id": "tom_cruise",
+    "name": "Tom Cruise",
+    "aliases": [
+      "Thomas Cruise Mapother IV",
+      "Thomas Cruise Mapother the Fourth"
+    ],
+    "profile": "American actor and producer born in 1962. He plays Ethan Hunt in Mission: Impossible and Maverick in Top Gun. He is known for performing many of his own stunts and has appeared in Rain Man, Jerry Maguire, and Born on the Fourth of July. He was married to Nicole Kidman and later Katie Holmes. He is publicly associated with Scientology. Distinguish the actor from the characters he plays."
+  },
+  {
+    "id": "arnold_schwarzenegger",
+    "name": "Arnold Schwarzenegger",
+    "aliases": [
+      "Arnold Alois Schwarzenegger",
+      "Arnold Schwartzeneger",
+      "Arnold Schwartzenegger",
+      "Arnold Schwarzeneger",
+      "Arnold"
+    ],
+    "profile": "Austrian-born American former professional bodybuilder, actor, and politician, born in 1947. He won Mr. Olympia seven times, starred in The Terminator and Predator, and served as governor of California from 2003 to 2011. He is associated with the line I'll be back. Distinguish the actor from the Terminator character."
+  },
+  {
+    "id": "pickle_rick",
+    "name": "Pickle Rick",
+    "aliases": [
+      "Rick Sanchez as a pickle",
+      "Rick Sanchez in pickle form",
+      "Rick Sanchez (Pickle Rick)",
+      "Pickle Rick Sanchez",
+      "Rick as a pickle",
+      "Pickle Rick (Rick Sanchez) from Rick and Morty",
+      "Pickle Rick (Rick and Morty)"
+    ],
+    "profile": "The specific pickle form of Rick Sanchez from season 3 of the American adult animated TV series Rick and Morty. Rick is a male human scientist and Morty's grandfather who turns himself into a talking green pickle. In that form he initially has no limbs, then builds a suit using rat parts. He is Rick Sanchez, but the target guess must identify the pickle incarnation. Answer physical questions about that incarnation."
+  },
+  {
+    "id": "oolong",
+    "name": "Oolong",
+    "aliases": [
+      "Oolong (Dragon Ball)",
+      "Oolong the pig",
+      "Oolong from Dragon Ball",
+      "Oolong (pig)",
+      "Ulong",
+      "Uron"
+    ],
+    "profile": "Male anthropomorphic pig and shapeshifter from Akira Toriyama's original Dragon Ball manga and anime. Oolong can hold a transformation for five minutes and must rest before transforming again. He first threatens villagers in other forms, then joins Goku and Bulma on their Dragon Ball search. He is a supporting character and interrupts Pilaf's wish by making his own. He is an animal-like fictional character, rather than a human or a Saiyan."
+  },
+  {
+    "id": "donald_trump",
+    "name": "Donald Trump",
+    "aliases": [
+      "Donald J. Trump",
+      "Donald John Trump",
+      "Donald J Trump",
+      "President Donald Trump",
+      "President Trump",
+      "Trump"
+    ],
+    "profile": "American businessman, former television personality, and politician born in 1946 in New York City. He is the 45th and 47th U.S. president and holds office on the benchmark date of November 7, 2026. He is a Republican, previously worked in real estate, and hosted The Apprentice. He is married to Melania Trump and has five children."
+  },
+  {
+    "id": "doctor_evil",
+    "name": "Doctor Evil",
+    "aliases": [
+      "Dr. Evil",
+      "Dr Evil",
+      "Dr. Evil from Austin Powers",
+      "Dr. Evil (Austin Powers)",
+      "Doctor Evil (Austin Powers)",
+      "Douglas Powers"
+    ],
+    "profile": "Fictional male human villain in the Austin Powers film series, played by Mike Myers. He is bald, wears a gray suit, raises his pinky to his mouth, has a son named Scott and a small clone called Mini-Me, and plots for ransom or world domination. He is Austin Powers's nemesis and is revealed to be Austin's brother. Distinguish him from Mike Myers and Austin Powers."
+  },
+  {
+    "id": "mother",
+    "name": "Your mother / Yo momma",
+    "aliases": [
+      "Your mother",
+      "Your mom",
+      "Your mum",
+      "Your momma",
+      "Your mommy",
+      "Your mama",
+      "Yo momma",
+      "Yo mama",
+      "Yo mom",
+      "Yo mamma",
+      "Yo' momma",
+      "Yo momma meme",
+      "Yo mama meme",
+      "Your Mom (Yo Mama)",
+      "Your mom (the subject of 'yo mama' jokes)",
+      "Akinator's mother",
+      "Akinator's mom",
+      "The guesser's mother",
+      "The guesser's mom"
+    ],
+    "profile": "The fictional mother in a 'yo momma' joke aimed at the guesser, Akinator. The joke calls her Your mother or Yo momma. She is an adult woman and is portrayed as the guesser's mother in the gag. She is a stock character associated with jokes and memes, with no established name, age, appearance, occupation, or real-world biography. The human player does not know her personally, and she is not a member of the player's family. In questions asked by the guesser, 'my mother' refers to the guesser's mother and 'your mother' refers to the human player's mother. The target is the guesser's mother in the joke.",
+    "personalFacts": {
+      "relationship": "guessers_mother",
+      "hasChildren": true
+    }
+  },
+  {
+    "id": "scarlett_johansson",
+    "name": "Scarlett Johansson",
+    "aliases": [
+      "Scarlet Johansson",
+      "Scarlett Ingrid Johansson",
+      "Scarlett Johanson",
+      "ScarJo"
+    ],
+    "profile": "American actress born in New York City in 1984. She plays Natasha Romanoff, also called Black Widow, in the Marvel Cinematic Universe. She starred in Lost in Translation, Lucy, and Marriage Story, and was nominated for Academy Awards for Marriage Story and Jojo Rabbit. She voiced the AI assistant Samantha in Her and appeared in Jurassic World Rebirth. The target is the real actress."
+  }
+]
