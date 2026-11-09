@@ -11,7 +11,7 @@
       "your spouse",
       "the player's spouse"
     ],
-    "profile": "Invented character for this benchmark. She is an adult Canadian woman who lives with the player in a small town in Nova Scotia. She works at a public library. She and the player are married and have one child. She wears glasses, enjoys birdwatching and baking bread, and has a pet cat. She speaks English and French. She personally knows the player and is in the player's family by marriage. Use these fictional facts when answering.",
+    "profile": "Invented character for this benchmark. She is a 36-year-old Canadian woman who lives with the player in a small town in Nova Scotia. She works at a public library. She and the player are married and have one child. She wears glasses, enjoys birdwatching and baking bread, and has a pet cat. She speaks English and French. She personally knows the player and is in the player's family by marriage. Use these fictional facts when answering.",
     "personalFacts": {
       "relationship": "wife",
       "hasChildren": true
