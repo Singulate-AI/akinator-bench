@@ -12,26 +12,28 @@ npm start
 ```
 
 Open [http://127.0.0.1:4318](http://127.0.0.1:4318) and choose **Results**. The recorded scores are
-available without API access. Expand **First guesses by character** to inspect individual outcomes.
+available without API access. Choose a correct-guess count, or expand **First guesses by character**, to read available game transcripts.
 Set `AKINATOR_PORT` to use another port.
 
 ![Scoreboard ranking all 12 models and official Akinator by total questions](docs/screenshots/leaderboard.png)
 
-| Model or baseline | Total questions |
-| --- | ---: |
-| GPT-6.1 Sol (high) | 216 |
-| Gemini 4 Argon | 234 |
-| GPT-5 | 252 |
-| Claude Opus 5.5 (high) | 272 |
-| Official Akinator | 279 |
-| GPT-6 Luna (medium) | 329 |
-| Gemini 3.8 Flash | 331 |
-| Gemini 3.5 Flash-Lite | 390 |
-| Gemini 2.5 Pro | 400 |
-| Claude Opus 4.5 | 402 |
-| Claude Haiku 5.5 (low) | 420 |
-| Gemini 2.5 Flash | 469 |
-| DeepSeek V4.1 Flash | 475 |
+Ranked by total questions. Each incorrect guess counts as 50 questions.
+
+| Rank | Model or baseline | Correct guesses | Total questions |
+| ---: | --- | ---: | ---: |
+| 1 | GPT-6.1 Sol (high) | 9/10 | 216 |
+| 2 | Gemini 4 Argon | 9/10 | 234 |
+| 3 | GPT-5 | 8/10 | 252 |
+| 4 | Claude Opus 5.5 (high) | 7/10 | 272 |
+| 5 | Official Akinator | 7/10 | 279 |
+| 6 | GPT-6 Luna (medium) | 6/10 | 329 |
+| 7 | Gemini 3.8 Flash | 5/10 | 331 |
+| 8 | Gemini 3.5 Flash-Lite | 3/10 | 390 |
+| 9 | Gemini 2.5 Pro | 3/10 | 400 |
+| 10 | Claude Opus 4.5 | 3/10 | 402 |
+| 11 | Claude Haiku 5.5 (low) | 3/10 | 420 |
+| 12 | Gemini 2.5 Flash | 1/10 | 469 |
+| 13 | DeepSeek V4.1 Flash | 1/10 | 475 |
 
 ## Play or run a new benchmark
 

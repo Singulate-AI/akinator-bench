@@ -126,16 +126,22 @@ export function makeServer({ brain, characters, baselines, files = benchmarkFile
       const report = await readJson(files.results);
       usesCurrentPrompt = report.settings?.guesserPrompt === GUESSER_PROMPT &&
         report.settings?.maxQuestions === MAX_QUESTIONS;
-      results = report.results.map(({ model, character, status, questions, guess, detailsWithheld }) => ({
-        model, character, status, questions, guess, detailsWithheld,
+      results = report.results.map(({ model, character, status, questions, guess, history, detailsWithheld }) => ({
+        model, character, status, questions, detailsWithheld,
+        guess: detailsWithheld ? null : guess,
+        history: detailsWithheld ? [] : history,
       }));
     } catch (error) {
       if (error.code !== 'ENOENT') throw new HttpError(500, 'Could not read the benchmark results file.');
     }
     const names = characters.map(({ id, name }) => ({ id, name }));
     const baselineRows = baselines ?? await readJson(files.baselines);
-    const scores = Object.fromEntries(Object.entries(baselineRows).map(([id, { status, questions, guess, detailsWithheld }]) => [
-      id, { status, questions, guess, detailsWithheld },
+    const scores = Object.fromEntries(Object.entries(baselineRows).map(([id, { status, questions, guess, transcript = [], detailsWithheld }]) => [
+      id, {
+        status, questions, detailsWithheld,
+        guess: detailsWithheld ? null : guess,
+        history: detailsWithheld ? [] : transcript.map(({ topic, answer }) => ({ question: topic, answer })),
+      },
     ]));
     const resultModels = modelCatalog.filter(({ id }) =>
       models.some((model) => model.id === id) || results.some((row) => row.model === id));

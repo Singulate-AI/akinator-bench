@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <title>Mind Reader Bench</title>
+  <title>Akinator Bench</title>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
   <script type="module" src="/app.js"></script>
@@ -17,7 +17,7 @@
           <path d="M1.5 10C7 2.5 27 2.5 32.5 10 27 17.500 7 17.500 1.500 10Z" fill="none" stroke="currentColor" stroke-width="2"/>
           <circle cx="17" cy="10" r="4.500" fill="currentColor"/>
         </svg>
-        Mind Reader Bench
+        Akinator Bench
       </div>
       <nav aria-label="Bench views">
         <button id="play-view" type="button" aria-pressed="true" aria-controls="play">Play</button>
@@ -120,7 +120,7 @@
           <table>
             <caption>Ranked by total questions</caption>
             <thead>
-              <tr><th scope="col">Model</th><th scope="col">Total questions</th></tr>
+              <tr><th scope="col">Model</th><th scope="col">Correct guesses</th><th scope="col">Total questions</th></tr>
             </thead>
             <tbody id="model-scores"></tbody>
           </table>
@@ -138,5 +138,12 @@
       </div>
     </section>
   </main>
+
+  <dialog id="game-dialog" aria-labelledby="game-title">
+    <div class="game-sheet">
+      <form method="dialog" class="game-close"><button type="submit" class="text-button">Close</button></form>
+      <div id="game-body"></div>
+    </div>
+  </dialog>
 </body>
 </html>

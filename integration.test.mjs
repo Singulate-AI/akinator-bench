@@ -1,5 +1,8 @@
 import assert from 'node:assert/strict';
 import { once } from 'node:events';
+import { mkdtemp, rm, writeFile } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import test from 'node:test';
 import { createBrain } from './brain.mjs';
 import { createCharacter } from './character.mjs';
@@ -100,6 +103,36 @@ test('uses GPT-5 without forcing API JSON mode on the shared guesser prompt', as
   });
   const move = await createBrain(complete).next('gpt5', []);
   assert.deepEqual(move, { type: 'question', text: 'Are they real?' });
+});
+
+test('serves the recorded questions and answers with the results', async (t) => {
+  const directory = await mkdtemp(join(tmpdir(), 'bench-results-'));
+  t.after(() => rm(directory, { recursive: true }));
+  const results = join(directory, 'results.json');
+  const history = [{ question: 'Is your character real?', answer: 'yes' }];
+  await writeFile(results, JSON.stringify({
+    results: [
+      { model: 'haiku', character: 'curie', status: 'correct', questions: 1, guess: 'Marie Curie', history },
+      { model: 'sol', character: 'curie', status: 'correct', questions: 1, guess: 'Marie Curie', history, detailsWithheld: true },
+    ],
+  }));
+  const baselines = {
+    curie: { status: 'incorrect', questions: 1, guess: 'Ada', transcript: [{ topic: 'Real person', answer: 'no' }] },
+  };
+  const characters = [{ id: 'curie', name: 'Marie Curie' }];
+  const server = makeServer({ brain: {}, characters, baselines, files: { results }, models: [] });
+  t.after(() => server.close());
+  server.listen(0, '127.0.0.1');
+  await once(server, 'listening');
+
+  const response = await fetch(`http://127.0.0.1:${server.address().port}/api/results`);
+  assert.equal(response.status, 200);
+  const data = await response.json();
+  assert.deepEqual(data.results[0].history, history);
+  assert.deepEqual(data.results[1], {
+    model: 'sol', character: 'curie', status: 'correct', questions: 1, guess: null, history: [], detailsWithheld: true,
+  });
+  assert.deepEqual(data.baselines.curie.history, [{ question: 'Real person', answer: 'no' }]);
 });
 
 test('keeps the question available after a failed request and replays a completed answer safely', async (t) => {

@@ -284,7 +284,11 @@ h1 {
 .scoreboard thead { background: none; }
 .scoreboard thead th { padding-block: 6px; border-bottom: 2px solid var(--ink); color: var(--ink-soft); font-size: 1rem; font-weight: 400; }
 .scoreboard thead th:first-child { padding-left: calc(var(--cell) + var(--rank)); }
-.scoreboard th:last-child, .scoreboard td { text-align: right; }
+.scoreboard thead th + th, .scoreboard td { text-align: right; }
+.scoreboard a { color: inherit; text-decoration-color: var(--cerise); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.scoreboard a:hover { color: var(--cerise); }
+#model-scores .baseline a { text-decoration-color: var(--saffron); }
+#model-scores .baseline a:hover { color: var(--saffron); }
 .scoreboard td { font-weight: 700; font-variant-numeric: lining-nums tabular-nums; white-space: nowrap; }
 .scoreboard tbody th, .scoreboard td { padding-block: 9px; border-color: var(--parchment-line); vertical-align: baseline; }
 .scoreboard tbody th { font-weight: 400; }
@@ -325,6 +329,44 @@ tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
 .badge[data-status="correct"] { background: var(--jade); color: var(--ink); }
 .badge[data-status="incorrect"] { background: #f2a3b5; color: var(--ink); }
 .cell-detail { margin: 5px 0 0; color: var(--mist); }
+.cell-detail a { color: inherit; text-underline-offset: 3px; }
+.cell-detail a:hover { color: var(--saffron); }
+
+/* A game opens as a sheet of the same playbill paper as the scoreboard. */
+#game-dialog {
+  width: min(44rem, calc(100% - 32px));
+  max-height: min(88vh, 900px);
+  padding: 0;
+  border: 4px double var(--ink);
+  outline: 8px solid var(--parchment);
+  background: var(--parchment);
+  color: var(--ink);
+}
+
+#game-dialog::backdrop { background: rgb(30 10 48 / .78); }
+#game-dialog :focus-visible { outline-color: var(--ink); }
+.game-sheet { padding: clamp(16px, 3.4vw, 32px); }
+.game-close { display: flex; justify-content: flex-end; }
+#game-dialog h2 { margin: 0; font: 700 clamp(1.7rem, 4vw, 2.3rem)/1.1 var(--poster); }
+#game-dialog a { color: inherit; text-decoration-color: var(--cerise); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+#game-dialog a:hover { color: var(--cerise); }
+.game-back { margin: 0 0 10px; font-size: 1rem; }
+.game-summary { margin: 10px 0 0; }
+.game-summary .badge { margin-right: 4px; }
+.game-note { margin: 8px 0 0; color: var(--ink-soft); font-style: italic; font-size: 1rem; }
+
+.game-list, .game-turns { list-style: none; margin: 18px 0 0; padding: 0; border-top: 2px solid var(--ink); }
+.game-list li, .game-turns li { padding-block: 9px; border-bottom: 1px solid var(--parchment-line); }
+.game-list li:last-child, .game-turns li:last-child { border-bottom: 0; }
+
+.game-list li { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 2px 14px; }
+.game-list-name { font-weight: 700; }
+.game-list-detail { grid-column: 1 / -1; color: var(--ink-soft); font-size: 1rem; }
+
+.game-turns { counter-reset: turn; }
+.game-turns li { counter-increment: turn; display: grid; grid-template-columns: 2rem 1fr auto; align-items: baseline; gap: 12px; }
+.game-turns li::before { content: counter(turn); color: var(--cerise); font: 700 1rem var(--poster); text-align: right; }
+.game-turns strong { white-space: nowrap; }
 
 @media (max-width: 800px) {
   .play-layout { grid-template-columns: 1fr; padding-block: 60px 48px; }
