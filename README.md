@@ -15,6 +15,8 @@ Open [http://127.0.0.1:4318](http://127.0.0.1:4318) and choose **Results**. The 
 available without API access. Expand **First guesses by character** to inspect individual outcomes.
 Set `AKINATOR_PORT` to use another port.
 
+![Scoreboard ranking all 12 models and official Akinator by total questions](docs/screenshots/leaderboard.png)
+
 | Model or baseline | Total questions |
 | --- | ---: |
 | GPT-6.1 Sol (high) | 216 |
@@ -45,6 +47,10 @@ node --env-file=.env server.mjs
 In **Play**, pick an enabled model and think of a character. Answer its questions and judge its
 first guess. Interactive play uses the selected model's provider. Batch runs also require the
 providers for the answerers described in the methodology.
+
+![A question, five answer choices, and two previous answers during a recorded round](docs/screenshots/gameplay.png)
+
+The gameplay screenshot replays the first three questions from the saved Pickle Rick round.
 
 ```sh
 node --env-file=.env bench.mjs --model haiku --character tom_cruise
